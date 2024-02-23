@@ -7,6 +7,7 @@ opencv_python_headless==4.8.1.78
 pandas==2.0.3
 Pillow==10.2.0
 pymongo==4.6.1
+portkey_ai==1.1.7
 rapidfuzz==3.5.2
 Requests==2.31.0
 SpeechRecognition==3.10.0
