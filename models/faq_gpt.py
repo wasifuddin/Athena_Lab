@@ -1,15 +1,13 @@
 from openai import OpenAI
 
 import json
-import sys
-import path
 
-dir = path.Path(__file__).abspath()
-sys.path.append(dir.parent.parent)
+import os
+cwd = os.getcwd()
 api_key = "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"
 
 model = "ft:gpt-3.5-turbo-1106:megamind-tech:martello-noyobo-v1:8fDuBPfs"
-model = "gpt-4-turbo-previews"
+model = "gpt-4-turbo-preview"
 
 llm_client = OpenAI(
     api_key=api_key,
@@ -20,7 +18,7 @@ session_id = "ww1204343kjrewre3"
 def getSystemText(jsonFile):
     with open(jsonFile) as f: data = json.load(f)
     return data
-json_path = "system_json/faq.json"
+json_path = cwd+"/system_json/faq.json"
 
 system_message = getSystemText(json_path)
 
