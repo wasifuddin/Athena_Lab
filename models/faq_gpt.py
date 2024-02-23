@@ -4,9 +4,8 @@ import json
 
 import os
 cwd = os.getcwd()
-api_key = "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"
+api_key = "API-KEY"
 
-model = "ft:gpt-3.5-turbo-1106:megamind-tech:martello-noyobo-v1:8fDuBPfs"
 model = "gpt-4-turbo-preview"
 
 llm_client = OpenAI(

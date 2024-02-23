@@ -7,9 +7,8 @@ import path
 
 dir = path.Path(__file__).abspath()
 sys.path.append(dir.parent.parent)
-api_key = "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"
+api_key = "API-KEY"
 
-model = "ft:gpt-3.5-turbo-1106:megamind-tech:abzo-noyobo-v1:8fE9gubE"
 model = "gpt-4-turbo-preview"
 llm_client = OpenAI(api_key=api_key,)
 

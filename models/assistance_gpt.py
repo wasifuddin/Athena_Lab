@@ -7,9 +7,8 @@ import path
 
 dir = path.Path(__file__).abspath()
 sys.path.append(dir.parent.parent)
-api_key = "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"
+api_key = "API-KEY"
 
-model = "ft:gpt-3.5-turbo-1106:megamind-tech:abzo-noyobo-v1:8fE9gubE"
 model = "gpt-4-turbo-preview"
 llm_client = OpenAI(
     api_key=api_key,
@@ -71,7 +70,7 @@ def predict(input, session_id):
     },
     {
         "name": "get_customer_service_assistance",
-        "description": "Facilitates a direct connection to customer service assistance for personalized help. This function should be invoked when the customer requests human assistance or needs support that automated systems cannot provide.",
+        "description": "Facilitates a direct connection to customer service assistance for personalized help. This function should be invoked when the customer requests human assistance, ask for a human to talk to or calls for a human support or needs support",
         "parameters": {
             "type": "object",
             "properties": {},
