@@ -3,11 +3,11 @@ from rapidfuzz import process, fuzz
 from urllib.parse import quote
 import requests
 
-client = MongoClient('mongodb+srv://abbozzo:abzo123abzo@serverlessinstance0.3swxn28.mongodb.net/?retryWrites=true&w=majority')
+client = MongoClient('mongodb_url')
 db = client["store_product_demo"]
 collection = db.product_list_v6
 
-cloudfront_domain = "d3edkvggxkcni7.cloudfront.net/abbozz-gallery-images"  # Replace with your CloudFront domain name
+cloudfront_domain = "cloudfront_url"  # Replace with your CloudFront domain name
 
 
 def product_url(product, category):

@@ -4,11 +4,11 @@ import random
 from urllib.parse import quote
 import re
 
-client = MongoClient('mongodb+srv://abbozzo:abzo123abzo@serverlessinstance0.3swxn28.mongodb.net/?retryWrites=true&w=majority')
+client = MongoClient('mongodb_url')
 db = client["abbozzo_v4"]
 art_collection = db.art_data
 
-cloudfront_domain = "d3edkvggxkcni7.cloudfront.net/abbozz-gallery-images"  # Replace with your CloudFront domain name
+cloudfront_domain = "cloudfront_url"  # Replace with your CloudFront domain name
 
 
 def art_url(art, artist):
@@ -21,7 +21,7 @@ def art_url(art, artist):
     artist = artist.replace(":", "").replace("/", ":").replace(" ", "+")
 
     encoded_url_art = quote(f"{artist}/{art}.png", safe=safe_list)
-    cloudfront_domain = "d3edkvggxkcni7.cloudfront.net/abbozz-gallery-images"  # Replace with your CloudFront domain name
+    cloudfront_domain = "cloudfront_url"  # Replace with your CloudFront domain name
 
     cloudfront_url = f"https://{cloudfront_domain}/{encoded_url_art}"
     print(cloudfront_url)
